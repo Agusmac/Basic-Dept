@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    min-height: 100vh;
+    /* overflow-x: hidden; */
+}
+
+.svg-white svg {
+    fill: white;
+}
+
+
+
+
+.featured-item {
+    min-width: calc(30vw - 6px)
+}
+
+@media (max-width: 1100px) {
+    .featured-item {
+        min-width: calc(40vw - 0px)
+    }
+}
+
+@media (max-width: 640px) {
+    .featured-item {
+        min-width: calc(100% - 65px)
+    }
+}
+
+
+
+
+@media (max-width: 1100px) {
+    .list-itemer {
+        min-width: calc(40vw - 0px)
+    }
+}
+
+@media (max-width: 640px) {
+    .list-itemer {
+        min-width: calc(100% - 65px)
+    }
+}
+
+
+
+/* Hide the scrollbar until interaction */
+
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        width: 0.4em;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,194 @@
+.noise {
+    overflow: hidden;
+    width: 100%;
+    /* height: 100%; */
+    /* background-color: #252422; */
+    background-image: url(/noise-filter.png);
+    animation: noiseAnimation 1s steps(2, start) infinite;
+}
+
+@keyframes noiseAnimation {
+    0% {background-position: 0 9rem;}
+    10% {background-position: -1rem -4rem;}
+    20% {background-position: -8rem, 2rem;}
+    30% {background-position: 9rem, -9rem;}
+    40% {background-position: -2rem, 7rem;}
+    50% {background-position: -9rem, -4rem;}
+    60% {background-position: 2rem, 6rem;}
+    70% {background-position: 7rem, -8rem;}
+    80% {background-position: -9rem, 1rem;}
+    90% {background-position: 6rem, -5rem;}
+    to {background-position: -7rem, 0;}
+}
+
+
+.underlined {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .underlined:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    margin-left: 28.8px;
+    margin-right: 28.8px;
+    background: white;
+    height: 1px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  
+  .underlined:hover:before, .underlined:focus:before, .underlined:active:before {
+    right: 0;
+  }
+
+
+
+
+
+
+/* 
+.test-fixed::before {
+    content: "";
+    z-index: 1;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #252422;
+    background-image: url(https://www.basicagency.com/_next/static/media/noise.e8298e81.png);
+    animation: noiseAnimation 1s steps(2, start) infinite;
+    pointer-events: none
+} */
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+/* summerspring noise */
+/* @keyframes noise {
+    0%,
+    100% {background-position: 0 0}
+    10% {background-position: -5% -10%}
+    20% {background-position: -15% 5%}
+    30% {background-position: 7% -25%}
+    40% {background-position: 20% 25%}
+    50% {background-position: -25% 10%}
+    60% {background-position: 15% 5%}
+    70% {background-position: 0 15%}
+    80% {background-position: 25% 35%}
+    90% {background-position: -10% 10%}
+  }  */
+
+/* summerspring */
+/* .test::before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    background-image: url(https://global-uploads.webflow.com/5a841cafef2b990001bcadd1/5ce40e59c004885ff4348712_background-noise.png);
+    animation: .1s infinite noise;
+    pointer-events: none
+  }
+  */
+
+
+
+
+
+
+
+
+/* background-color: #f4f4f4; */
+/* background-image: url(https://global-uploads.webflow.com/5a841cafef2b990001bcadd1/5ce40e59c004885ff4348712_background-noise.png); */
+
+
+
+
+/* 
+.body:after {
+  position:absolute;
+  top:-10rem;
+  left:-10rem;
+  animation:noise_noise__N0mbn 1s steps(2) infinite;
+  will-change:transform;
+   background-image:url(/_next/static/media/noise.e8298e81.png); 
+  background-position:50%;
+  width:calc(100% + 20rem);
+  height:calc(100% + 20rem);
+  content:""
+}
+ */
+
+
+
+
+
+/*  
+@keyframes noiseAnimation {
+    0% {
+        transform: translate3d(0, 9rem, 0)
+    }
+
+    10% {
+        transform: translate3d(-1rem, -4rem, 0)
+    }
+
+    20% {
+        transform: translate3d(-8rem, 2rem, 0)
+    }
+
+    30% {
+        transform: translate3d(9rem, -9rem, 0)
+    }
+
+    40% {
+        transform: translate3d(-2rem, 7rem, 0)
+    }
+
+    50% {
+        transform: translate3d(-9rem, -4rem, 0)
+    }
+
+    60% {
+        transform: translate3d(2rem, 6rem, 0)
+    }
+
+    70% {
+        transform: translate3d(7rem, -8rem, 0)
+    }
+
+    80% {
+        transform: translate3d(-9rem, 1rem, 0)
+    }
+
+    90% {
+        transform: translate3d(6rem, -5rem, 0)
+    }
+
+    to {
+        transform: translate3d(-7rem, 0, 0)
+    }
+} */
