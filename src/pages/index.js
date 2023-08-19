@@ -7,7 +7,7 @@ import Hero from '../../components/Hero'
 import Awards from '../../components/Awards'
 import Banner from '../../components/Banner'
 import Brands from '../../components/Brands'
-import Featured from '../../components/Featured'
+import { Featured } from '../../components/Featured'
 
 // const myFont = localFont({ src: './Fonts/SctoGroteskABold.woff2' })
 
@@ -60,7 +60,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* i added blur to the whole page for a bit of smoothness in the looks */}
-      <main className='noise duration-500 ease-in-out relative blur-[0.3px]' style={{ backgroundColor: bgColor, color: fontColor }}  >
+      <main className='noise duration-500 ease-in-out relative blur-[0.1px] md:blur-[0.3px]' style={{ backgroundColor: bgColor, color: fontColor }}  >
         <div className={Grotesk.className} >
 
           <Navbar showNavbar />

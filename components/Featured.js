@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React, { useEffect } from 'react'
-import DragScroll from './DragScrollSmooth';
-// import DragScroll from './DragScroll';
+// import DragScroll from './DragScrollSmooth';
+import DragScroll from './DragScroll';
 
-export default function Featured() {
+export function Featured() {
     DragScroll('.scrollable-container-2')
 
 
