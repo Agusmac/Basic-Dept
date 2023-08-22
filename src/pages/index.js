@@ -1,13 +1,17 @@
 import Head from 'next/head'
 // import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Navbar from '../../components/Navbar'
 import Hero from '../../components/Hero'
 import Awards from '../../components/Awards'
 import Banner from '../../components/Banner'
 import Brands from '../../components/Brands'
 import { Featured } from '../../components/Featured'
+import Slider from '../../components/Slider'
+import Footer from '../../components/Footer'
+import { useInView } from 'react-intersection-observer';
+import News from '../../components/News'
 
 // const myFont = localFont({ src: './Fonts/SctoGroteskABold.woff2' })
 
@@ -42,7 +46,19 @@ export default function Home() {
 
   const [showNavbar, setShowNavbar] = useState(true)
 
+  // const [sliderOn, setSliderOn] = useState(false)
 
+  const [ref, inView] = useInView({
+    threshold: 0.30,    // Trigger when visible percentage is 40% or more
+  });
+
+  // useEffect(() => {
+  //   if (inView)setSliderOn(true)
+  //   if (!inView)setSliderOn(false)
+  // }, [inView])
+
+
+  // const [SliderOnView, setFootView] = useState(false)
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -60,7 +76,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* i added blur to the whole page for a bit of smoothness in the looks */}
-      <main className='noise duration-500 ease-in-out relative blur-[0.1px] md:blur-[0.3px]' style={{ backgroundColor: bgColor, color: fontColor }}  >
+      {/* style={{ backgroundColor: bgColor, color: fontColor }} */}
+
+
+      <main className={`noise duration-[650ms] ease-in-out relative blur-[0.1px] md:blur-[0.3px] ${inView ? 'bg-[#252422] text-[#f9cdcd]' : 'bg-[#f4f4f4] text-[#252422]'}`}   >
         <div className={Grotesk.className} >
 
           <Navbar showNavbar />
@@ -68,13 +87,23 @@ export default function Home() {
           <Awards />
           <Banner />
           <Brands />
-          <Featured />
-          {/* <Test setShowNavbar/> */}
 
+          <Featured inView={inView} />
+
+          <div ref={ref}>
+            <Slider inView={inView} />
+          </div>
+          <News inView={inView}/>
+          <Footer/>
+          {/* <div className='h-[5000px]'></div> */}
 
         </div>
 
       </main>
+
+
+
+      {/* <Footer /> */}
     </>
   )
 }

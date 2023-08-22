@@ -4,7 +4,6 @@
 
 
 body {
-    min-height: 100vh;
     /* overflow-x: hidden; */
 }
 
@@ -12,9 +11,21 @@ body {
     fill: white;
 }
 
+.news-img {
+    width: calc(30vw - 6px)
+}
+@media (max-width: 1500px) {
+    .news-img {
+        width: calc(29vw - 8px)
+    }
+}
+@media (max-width: 767px) {
+    .news-img {
+        min-width: 100%
+    }
+}
 
-
-
+/*  */
 .featured-item {
     min-width: calc(30vw - 6px)
 }
@@ -54,12 +65,12 @@ body {
 .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
 
-    &::-webkit-scrollbar {
-        width: 0.4em;
-    }
+.scrollbar-hide::-webkit-scrollbar {
+    width: 0.4em;
+}
 
-    &::-webkit-scrollbar-thumb {
-        background-color: transparent;
-    }
+.scrollbar-hide::-webkit-scrollbar-thumb {
+    background-color: transparent;
 }

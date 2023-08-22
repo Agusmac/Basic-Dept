@@ -6,7 +6,7 @@ import DragScroll from './DragScroll';
 export default function Brands() {
     DragScroll('.scrollable-container-1')
     return (
-        <div className='w-full px-[27px] md:px-11 xl:px-[76.8px] mb-[12.5vw] flex gap-5 overflow-x-scroll scrollbar-hide uppercase scrollable-container-1 '>
+        <div className='w-full px-[5.4vw] md:px-11 xl:px-[76.8px] mb-[12.5vw] flex gap-5 overflow-x-scroll scrollbar-hide uppercase scrollable-container-1 '>
             <div className='flex-1 group cursor-pointer list-itemer'>
                 <div className='overflow-hidden relative'>
                     <Image draggable='false' className='w-full h-full duration-[250ms] scale-105 group-hover:scale-100  ease-out' src='/Assets/Patagonia.webp' alt='BD-logo' quality={100} width={1024} height={1280} />
@@ -24,7 +24,7 @@ export default function Brands() {
             </div>
             <div className='flex-1 group cursor-pointer list-itemer'>
                 <div className='overflow-hidden relative'>
-                    <video draggable='false'
+                    <video draggable='false' alt='google-store-video'
                         className='duration-[250ms] scale-105 group-hover:scale-100 ease-out'
                         autoPlay
                         loop

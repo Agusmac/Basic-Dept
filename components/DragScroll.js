@@ -45,7 +45,7 @@ const DragScroll = (divClass) => {
       scrollableContainer.removeEventListener('mouseup', handleMouseUp);
       scrollableContainer.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  }, [divClass]);
 };
 
 export default DragScroll;
