@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 // import DragScroll from './DragScrollSmooth';
-import DragScroll from './DragScroll';
+import DragScroll from './Helpers.js/DragScroll';
 
 export default function Brands() {
     DragScroll('.scrollable-container-1')

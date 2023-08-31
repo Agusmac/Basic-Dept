@@ -1,17 +1,8 @@
 import Image from 'next/image'
-
-// import DragScroll from './DragScrollSmooth';
-import DragScroll from './DragScroll';
+import DragScroll from './Helpers.js/DragScroll';
 
 export function Featured({ inView }) {
     DragScroll('.scrollable-container-2')
-
-
-
-
-
-
-
 
 
     return (

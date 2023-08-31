@@ -12,6 +12,8 @@ import Footer from '../../components/Footer'
 import { useInView } from 'react-intersection-observer';
 import News from '../../components/News'
 import Loader from '../../components/Loader'
+import SmoothScroll from '../../components/Helpers.js/SmoothScroll'
+
 
 // const myFont = localFont({ src: './Fonts/SctoGroteskABold.woff2' })
 
@@ -38,18 +40,19 @@ const Grotesk = localFont({
 
 export default function Home() {
 
-  // const [showNavbar, setShowNavbar] = useState(true)
+  SmoothScroll()
   const [noDisplay, setNoDisplay] = useState(false)
 
-
+  // lifts loader
   useEffect(() => {
     setTimeout(() => {
       setNoDisplay(true)
     }, 2000);
   }, [])
 
+  // Trigger color/bg change when visible percentage of slider div is 30% or more
   const [ref, inView] = useInView({
-    threshold: 0.30,    // Trigger when visible percentage is 30% or more
+    threshold: 0.30,
   });
 
 
@@ -62,8 +65,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* i added blur to the whole page for a bit of smoothness in the looks */}
-      {/* style={{ backgroundColor: bgColor, color: fontColor }} */}
-
 
       <main className={`noise duration-[650ms] ease-in-out relative blur-[0.1px] md:blur-[0.3px] ${inView ? 'bg-[#252422] text-[#f9cdcd]' : 'bg-[#f4f4f4] text-[#252422]'}`}   >
         <div className={Grotesk.className} >
@@ -73,9 +74,7 @@ export default function Home() {
           <Awards />
           <Banner />
           <Brands />
-
           <Featured inView={inView} />
-
           <div ref={ref}>
             <Slider inView={inView} />
           </div>

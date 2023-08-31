@@ -7,6 +7,32 @@ body {
     /* overflow-x: hidden; */
 }
 
+/* recommended (not necessary for lenis library */
+/* html.lenis {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-scrolling iframe {
+     pointer-events: none;
+  }  */
+/*  */
+
+
+
+
+
 .svg-white svg {
     fill: white;
 }
