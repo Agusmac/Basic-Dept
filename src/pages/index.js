@@ -37,7 +37,6 @@ const Grotesk = localFont({
   ],
 })
 
-
 export default function Home() {
 
   SmoothScroll()
@@ -67,8 +66,8 @@ export default function Home() {
       {/* i added blur to the whole page for a bit of smoothness in the looks */}
 
       <main className={`noise duration-[650ms] ease-in-out relative blur-[0.1px] md:blur-[0.3px] ${inView ? 'bg-[#252422] text-[#f9cdcd]' : 'bg-[#f4f4f4] text-[#252422]'}`}   >
-        <div className={Grotesk.className} >
 
+        <div className={Grotesk.className} >
           <Navbar showNavbar />
           <Hero />
           <Awards />
@@ -80,8 +79,8 @@ export default function Home() {
           </div>
           <News inView={inView} />
           <Footer />
-
         </div>
+
       </main>
       <div className={`${noDisplay && 'hidden'}`}>
         <Loader />

@@ -31,7 +31,7 @@ const DragScroll = (divClass) => {
     };
 
 
-    
+
 
     scrollableContainer.addEventListener('mousedown', handleMouseDown);
     scrollableContainer.addEventListener('mouseleave', handleMouseLeave);
