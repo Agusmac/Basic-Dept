@@ -8,6 +8,14 @@
     animation: noiseAnimation 1s steps(2, start) infinite;
 }
 
+@media (max-width: 767px) {
+  .noise{
+    animation:none;
+  }
+}
+
+
+
 @keyframes noiseAnimation {
     0% {background-position: 0 9rem;}
     10% {background-position: -1rem -4rem;}
