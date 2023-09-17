@@ -26,7 +26,7 @@ export default function Brands() {
                 <div className='overflow-hidden relative'>
                     <video draggable='false' alt='google-store-video'
                         className='duration-[250ms] will-change-auto transform-gpu scale-105 group-hover:scale-100 ease-out'
-                        autoPlay
+                        // autoPlay
                         loop
                         muted
                         src="/Assets/Google-store.mp4"

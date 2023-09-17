@@ -4,8 +4,8 @@
     width: 100%;
     /* height: 100%; */
     /* background-color: #252422; */
-    /* background-image: url(/noise-filter.png); */
-    /* animation: noiseAnimation 1s steps(2, start) infinite; */
+    background-image: url(/noise-filter.png);
+    animation: noiseAnimation 1s steps(2, start) infinite;
 }
 
 @media (max-width: 767px) {
