@@ -54,6 +54,11 @@ export default function Home() {
     threshold: 0.30,
   });
 
+  // stops hero video when is not in view(helps performance in chrome)
+  const [refer, inViewHero] = useInView({
+    threshold: 0.01,
+  });
+
 
   return (
     <>
@@ -69,7 +74,9 @@ export default function Home() {
 
         <div className={Grotesk.className} >
           <Navbar showNavbar />
-          <Hero />
+          <div ref={refer}>
+            <Hero inView={inViewHero}/>
+          </div>
           <Awards />
           <Banner />
           <Brands />
