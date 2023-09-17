@@ -4,7 +4,8 @@ import React from 'react'
 import DragScroll from './Helpers.js/DragScroll';
 
 export default function Brands() {
-    // DragScroll('.scrollable-container-1')
+    DragScroll('.scrollable-container-1')
+    
     return (
         <div className='w-full px-[5.4vw] md:px-11 xl:px-[76.8px] mb-[12.5vw] flex gap-5 overflow-x-scroll scrollbar-hide uppercase scrollable-container-1 '>
             <div className='flex-1 group cursor-pointer list-itemer'>
@@ -25,7 +26,8 @@ export default function Brands() {
             <div className='flex-1 group cursor-pointer list-itemer'>
                 <div className='overflow-hidden relative'>
                     <video draggable='false' alt='google-store-video'
-                        className='duration-[250ms] will-change-auto transform-gpu scale-105 group-hover:scale-100 ease-out'
+                        // className='duration-[250ms] will-change-auto transform-gpu scale-105 group-hover:scale-100 ease-out'
+                        className=' scale-105 '
                         autoPlay
                         loop
                         muted
